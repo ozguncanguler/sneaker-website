@@ -9,6 +9,13 @@ body,
 #root,
 .app {
     height: 100%;
-    @apply bg-creme;
     @apply text-dark-blue;
 }
+@media (max-width: 1080px) { 
+    html,
+    body,
+    #root,
+    .app {
+        @apply text-dark-blue;
+    }
+  }

@@ -20,8 +20,9 @@ module.exports = {
         brown: "#B45309",
       },
       backgroundImage: (theme) => ({
-        "diagonal-cream-softyellow":
-          "linear-gradient(135deg, #fefbec 50%, #fef3c7 50%)",
+        "rectangle-image": "url('./assets/rectanglebackground.png')",
+        "wavesfull-image": "url('./assets/vawesfullscreenbackground.png')",
+        "cream-to-white": "linear-gradient(180deg, #FFFBEB 0%, #FFFFFF 100%)",
       }),
       fontFamily: {
         roboto: "Roboto",
@@ -53,11 +54,18 @@ module.exports = {
         wavesfull: "url('./assets/vawesfullscreenbackground.png')",
         wavesmobile: "url('./assets/wavesbackgroundmobile.png')",
         worldmap: "url('./assets/worldmap.png')",
+        rectangle: "url('./assets/rectanglebackground.png')",
       },
       screens: {
         xs: "480px",
         sm: "720px",
         md: "1080px",
+      },
+      boxShadow: {
+        "custom-white":
+          "0px 25px 50px -12px rgba(255, 255, 255, 0.25), 0px 0px 15px rgba(255, 255, 255, 0.07)",
+        "custom-white-hover":
+          "0px 35px 60px -12px rgba(255, 255, 255, 0.35), 0px 0px 25px rgba(255, 255, 255, 0.1)",
       },
     },
   },

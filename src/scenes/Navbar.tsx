@@ -14,7 +14,7 @@ const Link: FC<LinkProps> = ({
       className={`${
         selectedPage === lowerCasePage
           ? "text-brown border-2 border-brown p-3 rounded-md"
-          : "text-dark-brown"
+          : "text-dark-brown py-3"
       } hover:text-brown transition duration-500 font-medium text-base`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
@@ -27,12 +27,14 @@ const Link: FC<LinkProps> = ({
 const Navbar: FC<NavbarProps> = ({
   selectedPage,
   setSelectedPage,
+  isTopOfPage,
 }: NavbarProps) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isLargeScreen = useMediaQuery("(min-width: 1080px)");
+  const navbarBackground = isTopOfPage ? "" : "bg-dark-yellow";
 
   return (
-    <nav className={`z-40 w-full top-0 py-6`}>
+    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-roboto text-3xl font-medium">Collers</h4>
 
