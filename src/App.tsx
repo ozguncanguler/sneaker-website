@@ -64,7 +64,7 @@ function App() {
         </div>
       </div>
       <div className="w-full h-full ">
-        <div className="w-5/6 mx-auto h-full ">
+        <div className="w-full md:5/6 mx-auto h-full ">
           <Resources
             setSelectedPage={setSelectedPage}
             selectedPage={selectedPage}
