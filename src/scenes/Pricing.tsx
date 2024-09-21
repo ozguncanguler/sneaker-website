@@ -12,7 +12,7 @@ const Pricing: FC<PricingProps> = ({ setSelectedPage: PricingProps }) => {
       id="pricing"
       className="flex flex-col justify-center items-center h-full gap-16 pt-4  md:py-32"
     >
-      <div className="flex flex-col justify-around bg-white bg-opacity-80  shadow-xl rounded-3xl  md:flex-row md:h-2/3">
+      <div className="flex flex-col justify-around bg-white bg-opacity-80  shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-3xl     md:flex-row md:h-2/3">
         <div className="md:w-2/5 flex flex-col justify-center items-center md:items-start">
           <div className="text-3xl font-bold py-3 md:text-6xl md:font-extrabold ">
             Why join us
@@ -53,13 +53,21 @@ const Pricing: FC<PricingProps> = ({ setSelectedPage: PricingProps }) => {
         </div>
 
         <div className="w-full mt-12 flex items-center md:w-2/5">
-          <svg
+          <motion.svg
             width="85"
             height="86"
             viewBox="0 0 85 86"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="absolute z-30 w-1/12 translate-x-36 translate-y-32"
+            className="absolute z-30 w-1/12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }} // %50 görünümde olduğunda tetiklenecek
+            transition={{ duration: 2, ease: "easeOut" }} // 2 saniye ve yumuşak geçiş
+            variants={{
+              hidden: { x: 0, y: "-6rem" }, // Başlangıç pozisyonu
+              visible: { x: "9rem", y: "7rem" }, // Görünümdeki hedef pozisyon
+            }}
           >
             <rect
               opacity="0.75"
@@ -68,20 +76,28 @@ const Pricing: FC<PricingProps> = ({ setSelectedPage: PricingProps }) => {
               rx="42.5"
               fill="#15803D"
             />
-          </svg>
+          </motion.svg>
 
           <img
             className="relative z-20"
             src="../assets/screendesktopvideo.png"
             alt="Screen desktop video"
           />
-          <svg
+          <motion.svg
             className="absolute z-10 w-full md:w-1/3"
             width="713"
             height="627"
             viewBox="0 0 713 627"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }} // %50 görünümde olduğunda animasyon tetiklenecek
+            transition={{ duration: 2, ease: "easeOut" }} // 2 saniyelik yumuşak geçiş
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 }, // Başlangıçta %90 boyut ve tam şeffaf
+              visible: { opacity: 1, scale: 1 }, // Görünümde tam opak ve %100 boyut
+            }}
           >
             <rect
               y="471.948"
@@ -117,7 +133,7 @@ const Pricing: FC<PricingProps> = ({ setSelectedPage: PricingProps }) => {
               rx="50"
               fill="#BE185D"
             />
-          </svg>
+          </motion.svg>
         </div>
       </div>
     </section>

@@ -27,7 +27,7 @@ const Login: FC<LoginProps> = ({ setSelectedPage: LoginProps }) => {
 
       <div className="relative w-full h-screen flex flex-col md:h-auto md:mb-32 md:flex-row">
         {/* Sol Menü */}
-        <div className="flex flex-row text-nowrap justify-start  translate-y-[-5vh] md:flex-col md:space-y-6 md:w-1/5">
+        <div className="flex flex-row text-nowrap w-full justify-start  translate-y-[-5vh]  md:flex-col md:space-y-6 md:w-1/5">
           <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
             <img className="pr-3 " src="../assets/searchicon.svg" alt="" />
             Bibendum tellus
@@ -60,21 +60,21 @@ const Login: FC<LoginProps> = ({ setSelectedPage: LoginProps }) => {
           <img
             src="./assets/screendesktoppeople.png"
             alt="Desktop People"
-            className="absolute w-[65%] h-auto top-0 left-1/4 transform translate-x-[-15%] translate-y-[-15%]  z-10"
+            className="absolute w-[65%] h-auto top-0 left-1/4 transform translate-x-[-15%] translate-y-[-15%]  z-10 transition-transform duration-1000 hover:scale-105 hover:z-40"
           />
 
           {/* Ortadaki görsel */}
           <img
             src="./assets/screendesktopthreesneaker.png"
             alt="Three Sneakers"
-            className="absolute w-[75%] h-auto top-0 left-1/4 transform translate-x-[0%] translate-y-[0%] z-20"
+            className="absolute w-[75%] h-auto top-0 left-1/4 transform translate-x-[0%] translate-y-[0%] z-20 transition-transform duration-1000 hover:scale-105 hover:z-40"
           />
 
           {/* En öndeki görsel */}
           <img
             src="./assets/strechingleg.png"
             alt="Streching Leg"
-            className="absolute w-[30%] h-auto top-1/4 left-3/4 transform translate-x-[-0%] translate-y-[0%] z-30"
+            className="absolute w-[30%] h-auto top-1/4 left-3/4 transform translate-x-[-0%] translate-y-[0%] z-30 transition-transform duration-1000 hover:scale-105"
           />
         </div>
       </div>

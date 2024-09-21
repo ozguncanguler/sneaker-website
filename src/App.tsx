@@ -43,8 +43,12 @@ function App() {
           />
         </div>
       </div>
-      <div className="w-full h-auto bg-dark-blue md:h-full">
-        <div className="w-11/12  mx-auto h-full md:w-5/6">
+      <div
+        className={`${
+          isLargeScreen === true ? "bg-backlights" : "bg-backlights-mobile"
+        } bg-no-repeat bg-contain bg-center w-full h-auto  bg-dark-blue md:h-full`}
+      >
+        <div className={`w-11/12  mx-auto h-full md:w-5/6`}>
           <Solutions
             setSelectedPage={setSelectedPage}
             selectedPage={selectedPage}
@@ -67,7 +71,11 @@ function App() {
           />
         </div>
       </div>
-      <div className="w-full h-full bg-wavesfull-image bg-no-repeat bg-left-bottom bg-cover">
+      <div
+        className={`w-full h-full ${
+          isLargeScreen === true ? "bg-wavesfull-image" : "bg-wavesmobile-image"
+        }  bg-no-repeat bg-left-bottom bg-cover`}
+      >
         <div className="w-5/6 mx-auto h-full ">
           <Login
             setSelectedPage={setSelectedPage}

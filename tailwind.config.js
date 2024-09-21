@@ -22,7 +22,10 @@ module.exports = {
       backgroundImage: (theme) => ({
         "rectangle-image": "url('./assets/rectanglebackground.png')",
         "wavesfull-image": "url('./assets/vawesfullscreenbackground.png')",
+        "wavesmobile-image": "url('./assets/wavesbackgroundmobile.png')",
         "cream-to-white": "linear-gradient(180deg, #FFFBEB 0%, #FFFFFF 100%)",
+        backlights: "url('./assets/backlightsbackground.png')",
+        "backlights-mobile": "url('./assets/backlightsmobilebackground.png')",
       }),
       fontFamily: {
         roboto: "Roboto",

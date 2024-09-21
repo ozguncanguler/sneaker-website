@@ -114,9 +114,9 @@ const Footer: FC<FooterProps> = ({ setSelectedPage: FooterProps }) => {
           </div>
 
           {/* Get the App */}
-          <div className="md:text-center">
+          <div className="flex-col items-start text-center md:flex-row md:text-left">
             <h3 className="md:text-lg md:font-bold md:mb-4">Get the App</h3>
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-center space-y-4 md:items-start">
               <a href="#">
                 <img
                   src="./assets/appstoredownload.png"
@@ -138,7 +138,7 @@ const Footer: FC<FooterProps> = ({ setSelectedPage: FooterProps }) => {
               <h3 className="my-4 md:text-lg md:font-bold md:mb-4">
                 Follow Us
               </h3>
-              <div className="flex space-x-6 justify-center">
+              <div className="flex space-x-6 justify-center md:justify-evenly">
                 <img src="../assets/youtubeicon.svg" alt="Youtube icon" />
                 <img src="../assets/facebookicon.svg" alt="Facebook icon" />
                 <img src="../assets/twittericon.svg" alt="Twitter icon" />

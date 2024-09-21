@@ -23,7 +23,7 @@ const Signup: FC<SignupProps> = ({ setSelectedPage, selectedPage }) => {
   ];
 
   return (
-    <section id="sign up now" className="relative w-full py-10 md:py-48">
+    <section id="sign up now" className="relative w-full py-10 md:py-24">
       <div
         id="mapcontainer"
         className="relative aspect-video"

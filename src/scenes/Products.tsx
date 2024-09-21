@@ -36,7 +36,12 @@ const Products: FC<ProductsProps> = ({ setSelectedPage: ProductsProps }) => {
             <button className="text-dark-brown font-medium text-xl border-brown border-2 px-4 py-2 rounded-md text-nowrap md:px-12 md:py-4">
               Sign up now
             </button>
-            <button className="text-dark-brown font-medium text-base px-12 py-4 text-nowrap">
+            <button className="text-dark-brown font-medium text-base px-12 py-4 text-nowrap flex ">
+              <img
+                className="pr-2"
+                src="../assets/playicon.svg"
+                alt="Play icon"
+              />
               Watch Demo
             </button>
           </div>
@@ -44,7 +49,7 @@ const Products: FC<ProductsProps> = ({ setSelectedPage: ProductsProps }) => {
         <div className="w-4/5 py-4 relative md:w-2/5 md:py0">
           <div className="absolute bg-dark-yellow rounded-[50px] w-[90%] h-[90%] z-[0]" />
           <img
-            className="relative z-1"
+            className="relative z-1 transition-transform duration-1000 hover:scale-105"
             src="../assets/sneaker.png"
             alt="sneaker"
           />

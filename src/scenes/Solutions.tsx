@@ -22,7 +22,17 @@ const Solutions: FC<SolutionsProps> = ({ setSelectedPage: SolutionsProps }) => {
           </button>
         </div>
         <div className="flex-col justify-between md:flex md:flex-row">
-          <div className="rounded-lg mb-8 shadow-custom-white hover:shadow-custom-white-hover transition-shadow duration-300 md:w-[30%] md:mb-0">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.97 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            className="bg-dark-blue rounded-lg mb-8 shadow-custom-white hover:shadow-custom-white-hover transition-shadow duration-300 md:w-[30%] md:mb-0"
+          >
             <img
               className="relative z-1 rounded-t-lg"
               src="../assets/twosneaker.png"
@@ -38,9 +48,18 @@ const Solutions: FC<SolutionsProps> = ({ setSelectedPage: SolutionsProps }) => {
                 Buy now
               </button>
             </div>
-          </div>
-
-          <div className="rounded-lg mb-8 shadow-custom-white hover:shadow-custom-white-hover transition-shadow duration-300 md:w-[30%] md:mb-0">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.97 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            className="bg-dark-blue rounded-lg mb-8 shadow-custom-white hover:shadow-custom-white-hover transition-shadow duration-300 md:w-[30%] md:mb-0"
+          >
             <img
               className="relative z-1 rounded-t-lg"
               src="../assets/threesneaker.png"
@@ -56,9 +75,18 @@ const Solutions: FC<SolutionsProps> = ({ setSelectedPage: SolutionsProps }) => {
                 Buy now
               </button>
             </div>
-          </div>
-
-          <div className="rounded-lg mb-8 shadow-custom-white hover:shadow-custom-white-hover transition-shadow duration-300 md:w-[30%] md:mb-0">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.97 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+            className="bg-dark-blue rounded-lg mb-8 shadow-custom-white hover:shadow-custom-white-hover transition-shadow duration-300 md:w-[30%] md:mb-0"
+          >
             <img
               className="relative z-1 rounded-t-lg"
               src="../assets/twolegswithsneaker.png"
@@ -74,7 +102,7 @@ const Solutions: FC<SolutionsProps> = ({ setSelectedPage: SolutionsProps }) => {
                 Buy now
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

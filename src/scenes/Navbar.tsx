@@ -36,7 +36,9 @@ const Navbar: FC<NavbarProps> = ({
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
-        <h4 className="font-roboto text-3xl font-medium">Collers</h4>
+        <h4 className="font-roboto text-3xl font-medium text-dark-brown">
+          Collers
+        </h4>
 
         {/* DESKTOP NAVIGATION BAR*/}
         {isLargeScreen ? (
