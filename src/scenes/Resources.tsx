@@ -30,7 +30,7 @@ const Resources: FC<ResourcesProps> = ({ setSelectedPage: ResourcesProps }) => {
       className="flex flex-col justify-center items-center h-full gap-16 py-32"
     >
       <div className="relative w-full h-[1000px] overflow-hidden bg-yellow-200">
-        <div className="flex justify-center md:justify-between items-center w-full px-10 absolute top-0 left-0 md:mx-20">
+        <div className="flex justify-center md:justify-between items-center w-11/12 px-4 absolute top-0 left-0 md:mx-20">
           <h2 className="text-3xl font-bold text-blue-900 md:text-5xl">
             Because they love us
           </h2>

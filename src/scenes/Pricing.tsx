@@ -84,7 +84,7 @@ const Pricing: FC<PricingProps> = ({ setSelectedPage: PricingProps }) => {
             alt="Screen desktop video"
           />
           <motion.svg
-            className="absolute z-10 w-full md:w-1/3"
+            className="absolute z-10 w-5/6 md:w-1/3"
             width="713"
             height="627"
             viewBox="0 0 713 627"

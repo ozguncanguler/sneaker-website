@@ -3,6 +3,10 @@ import { LoginProps } from "../types";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from "framer-motion";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
 
 const Login: FC<LoginProps> = ({ setSelectedPage: LoginProps }) => {
   const isLargeScreen = useMediaQuery("(min-width: 1080px)");
@@ -27,32 +31,83 @@ const Login: FC<LoginProps> = ({ setSelectedPage: LoginProps }) => {
 
       <div className="relative w-full h-screen flex flex-col md:h-auto md:mb-32 md:flex-row">
         {/* Sol Menü */}
-        <div className="flex flex-row text-nowrap w-full justify-start  translate-y-[-5vh]  md:flex-col md:space-y-6 md:w-1/5">
-          <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
-            <img className="pr-3 " src="../assets/searchicon.svg" alt="" />
-            Bibendum tellus
-          </button>
-          <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
-            <img className="pr-3 " src="../assets/shieldicon.svg" alt="" />
-            Cras eget
-          </button>
-          <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
-            <img className="pr-3 " src="../assets/rocketicon.svg" alt="" />
-            Dolor pharetra
-          </button>
-          <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
-            <img className="pr-3 " src="../assets/screenicon.svg" alt="" />
-            Amet, fringilla
-          </button>
-          <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
-            <img className="pr-3 " src="../assets/podcasticon.svg" alt="" />
-            Amet nibh
-          </button>
-          <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
-            <img className="pr-3 " src="../assets/eqicon.svg" alt="" />
-            Sed velit
-          </button>
-        </div>
+        {isLargeScreen ? (
+          <div className="flex flex-row text-nowrap w-full justify-start  translate-y-[-5vh]  md:flex-col md:space-y-6 md:w-1/5">
+            <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+              <img className="pr-3 " src="../assets/searchicon.svg" alt="" />
+              Bibendum tellus
+            </button>
+            <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+              <img className="pr-3 " src="../assets/shieldicon.svg" alt="" />
+              Cras eget
+            </button>
+            <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+              <img className="pr-3 " src="../assets/rocketicon.svg" alt="" />
+              Dolor pharetra
+            </button>
+            <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+              <img className="pr-3 " src="../assets/screenicon.svg" alt="" />
+              Amet, fringilla
+            </button>
+            <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+              <img className="pr-3 " src="../assets/podcasticon.svg" alt="" />
+              Amet nibh
+            </button>
+            <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+              <img className="pr-3 " src="../assets/eqicon.svg" alt="" />
+              Sed velit
+            </button>
+          </div>
+        ) : (
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            freeMode={true}
+            pagination={{
+              clickable: true,
+            }}
+            style={{ margin: 0 }}
+            modules={[FreeMode]}
+            className="mySwiper flex flex-row text-nowrap w-11/12 justify-start  translate-y-[-5vh]  md:flex-col md:space-y-6 md:w-1/5"
+          >
+            <SwiperSlide>
+              <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+                <img className="pr-3 " src="../assets/searchicon.svg" alt="" />
+                Bibendum tellus
+              </button>
+            </SwiperSlide>
+            <SwiperSlide>
+              <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+                <img className="pr-3 " src="../assets/shieldicon.svg" alt="" />
+                Cras eget
+              </button>
+            </SwiperSlide>
+            <SwiperSlide>
+              <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+                <img className="pr-3 " src="../assets/rocketicon.svg" alt="" />
+                Dolor pharetra
+              </button>
+            </SwiperSlide>
+            <SwiperSlide>
+              <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+                <img className="pr-3 " src="../assets/screenicon.svg" alt="" />
+                Amet, fringilla
+              </button>
+            </SwiperSlide>
+            <SwiperSlide>
+              <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+                <img className="pr-3 " src="../assets/podcasticon.svg" alt="" />
+                Amet nibh
+              </button>
+            </SwiperSlide>
+            <SwiperSlide>
+              <button className="bg-white px-6 py-3 text-dark-blue text-left flex rounded-lg hover:shadow-lg transition duration-500">
+                <img className="pr-3 " src="../assets/eqicon.svg" alt="" />
+                Sed velit
+              </button>
+            </SwiperSlide>
+          </Swiper>
+        )}
 
         {/* Sağdaki Görseller */}
         <div className="flex justify-center items-center relative w-full md:w-4/5 h-full">
