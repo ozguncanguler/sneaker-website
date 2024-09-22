@@ -34,7 +34,7 @@ const Navbar: FC<NavbarProps> = ({
   const navbarBackground = isTopOfPage ? "" : "bg-dark-yellow";
 
   return (
-    <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
+    <nav className={`${navbarBackground} z-40 w-screen fixed top-0 py-6`}>
       <div className="flex items-center justify-between mx-auto w-5/6">
         <h4 className="font-roboto text-3xl font-medium text-dark-brown">
           Collers
